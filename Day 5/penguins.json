@@ -1,0 +1,27 @@
+[
+    {
+        "id": 10,
+        "specie": "gentoo",
+        "location": "New York"
+    },
+    {
+        "id": 11,
+        "specie": "gentoo",
+        "location": "London"
+    },
+    {
+        "id": 12,
+        "specie": "king",
+        "location": "New York"
+    },
+    {
+        "id": 13,
+        "specie": "gentoo",
+        "location": "London"
+    },
+    {
+        "id": 14,
+        "specie": "king",
+        "location": "New York"
+    }
+]
