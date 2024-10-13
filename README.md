@@ -28,10 +28,10 @@ The repository is organized into several sections corresponding to the course mo
 
 (This serves as just the outline, and actual inclass content might differ later in the repository)
 
-1. **Course 1: Introduction to Data Analytics, Python Programming, and GitHub Copilot**
+1. **Course 1: Introduction to Data Analytics, and Python Programming**
    - Overview of Data Analytics
    - Introduction to Python Programming
-   - Setting up GitHub and GitHub Copilot for collaboration
+   - Setting up GitHub for collaboration
 
 2. **Course 2: Data Acquisition and Cleaning**
    - Sources of Data (APIs, Databases, Web Scraping)
