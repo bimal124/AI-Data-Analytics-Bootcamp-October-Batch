@@ -22,6 +22,7 @@ The repository is organized into several sections corresponding to the course mo
 📁 projects/            # Capstone projects and AI applications
 📁 resources/           # Additional resources, links, and cheat sheets
 📁 assignments/         # Weekly assignments and project descriptions
+```
 
 ## 🧑‍🏫 Course Curriculum
 
@@ -65,7 +66,7 @@ Throughout the course, we’ll be working with:
 
    ```bash
    git clone https://github.com/your-username/data-analytics-ai-course.git
-
+   ```
 
 ## 🚀 Getting Started
 
@@ -73,7 +74,7 @@ Make sure you have Python installed along with the necessary packages. You can i
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## 📚 Resources and References
 
 - [Python Documentation](https://docs.python.org/3/)
