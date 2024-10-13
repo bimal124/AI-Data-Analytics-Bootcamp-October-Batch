@@ -26,29 +26,66 @@ The repository is organized into several sections corresponding to the course mo
 
 ## 🧑‍🏫 Course Curriculum
 
-1. **Introduction to Data Analytics**
+(This serves as just the outline, and actual inclass content might differ later in the repository)
+
+1. **Course 1: Introduction to Data Analytics, Python Programming, and GitHub Copilot**
    - Overview of Data Analytics
-   - Data Types & Formats
-   - Data Cleaning and Transformation
-   - Exploratory Data Analysis (EDA)
+   - Introduction to Python Programming
+   - Setting up GitHub and GitHub Copilot for collaboration
 
-2. **Introduction to Artificial Intelligence**
-   - Basics of AI and Machine Learning
-   - Supervised vs. Unsupervised Learning
-   - Key Algorithms (Linear Regression, Decision Trees, K-Means)
+2. **Course 2: Data Acquisition and Cleaning**
+   - Sources of Data (APIs, Databases, Web Scraping)
+   - Data Cleaning Techniques
+   - Handling Missing Data and Data Imputation
 
-3. **Advanced Data Analytics Techniques**
-   - Data Visualization (Matplotlib, Seaborn)
-   - Feature Engineering & Selection
-   - Model Evaluation & Optimization
+3. **Course 3: Exploratory Data Analysis (EDA) and Power BI**
+   - Data Visualization Tools and Techniques
+   - Exploratory Data Analysis (EDA) with Python
+   - Introduction to Power BI for Business Analytics
 
-4. **Artificial Intelligence in Practice**
-   - Neural Networks and Deep Learning
-   - Natural Language Processing (NLP)
-   - AI Applications (Image Recognition, Text Analysis)
+4. **Course 4: Advanced SQL and Data Warehousing**
+   - Advanced SQL Queries and Optimization
+   - Data Warehousing Concepts
+   - ETL Process (Extract, Transform, Load)
 
-5. **Capstone Project**
-   - End-to-end project applying all course concepts
+5. **Course 5: Introduction to Machine Learning**
+   - Supervised and Unsupervised Learning
+   - Common Machine Learning Algorithms
+   - Hands-on with Scikit-learn
+
+6. **Course 6: Feature Engineering and Model Evaluation**
+   - Feature Selection and Extraction
+   - Model Evaluation Metrics (Confusion Matrix, ROC-AUC)
+   - Cross-Validation and Hyperparameter Tuning
+
+7. **Course 7: Deep Learning Fundamentals**
+   - Introduction to Neural Networks
+   - Basics of Deep Learning Models (CNNs, RNNs)
+   - Hands-on with TensorFlow and Keras
+
+8. **Course 8: Natural Language Processing (NLP) and Large Language Models (LLMs)**
+   - Text Preprocessing and Feature Extraction
+   - Building NLP Models
+   - Introduction to Large Language Models (LLMs)
+
+9. **Course 9: Time Series Analysis**
+   - Time Series Data and Forecasting Techniques
+   - ARIMA, SARIMA, and Exponential Smoothing
+   - Hands-on with Time Series in Python
+
+10. **Course 10: Big Data, Cloud Computing, and Data Compliance**
+    - Introduction to Big Data Tools (Hadoop, Spark)
+    - Cloud Platforms (AWS, Azure, Google Cloud)
+    - Data Privacy and Compliance (GDPR, CCPA)
+
+11. **Course 11: AI, Model Deployment, and Business Analysis**
+    - Deploying Machine Learning Models to Production
+    - Business Analysis Techniques and Tools
+    - Ethical Implications of AI in Business
+
+**Capstone Projects**
+- End-to-end project applying concepts from the entire course to solve real-world problems
+
 
 ## 🛠️ Tools and Technologies
 
