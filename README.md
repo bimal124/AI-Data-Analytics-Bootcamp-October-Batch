@@ -123,4 +123,4 @@ pip install -r requirements.txt
 If you encounter any issues or have questions, feel free to open an issue or reach out to me:
 
 - **Email**: [Mail@: dev.idrees@gmail.com ](mailto:dev.idrees@gmail.com)
-- **GitHub**: [Mohammad Idrees Bhat](https://github.com/dev.idrees)
+- **GitHub**: [Mohammad Idrees Bhat](https://github.com/devidrees)
