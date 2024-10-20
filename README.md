@@ -41,7 +41,8 @@ The repository is organized into several sections corresponding to the course mo
 3. **Course 3: Exploratory Data Analysis (EDA) and Power BI**
    - Data Visualization Tools and Techniques
    - Exploratory Data Analysis (EDA) with Python
-   - Introduction to Power BI for Business Analytics
+   - Introduction to Power BI for Business Intelligence and Dashboarding
+   - Advanced Power BI: DAX for Data Analysis
 
 4. **Course 4: Advanced SQL and Data Warehousing**
    - Advanced SQL Queries and Optimization
