@@ -1,0 +1,279 @@
+[2024-12-11T21:19:37.976+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-11T21:19:38.003+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_and_store_google_books.insert_book_data scheduled__2024-08-01T00:00:00+00:00 [queued]>
+[2024-12-11T21:19:38.016+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_and_store_google_books.insert_book_data scheduled__2024-08-01T00:00:00+00:00 [queued]>
+[2024-12-11T21:19:38.017+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-11T21:19:38.196+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): insert_book_data> on 2024-08-01 00:00:00+00:00
+[2024-12-11T21:19:38.210+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=846) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-11T21:19:38.213+0000] {standard_task_runner.py:72} INFO - Started process 869 to run task
+[2024-12-11T21:19:38.216+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_and_store_google_books', 'insert_book_data', 'scheduled__2024-08-01T00:00:00+00:00', '--job-id', '830', '--raw', '--subdir', 'DAGS_FOLDER/dag2.py', '--cfg-path', '/tmp/tmp00f6hkof']
+[2024-12-11T21:19:38.220+0000] {standard_task_runner.py:105} INFO - Job 830: Subtask insert_book_data
+[2024-12-11T21:19:38.310+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_and_store_google_books.insert_book_data scheduled__2024-08-01T00:00:00+00:00 [running]> on host bb74d1700244
+[2024-12-11T21:19:38.455+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_and_store_google_books' AIRFLOW_CTX_TASK_ID='insert_book_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-01T00:00:00+00:00'
+[2024-12-11T21:19:38.457+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-11T21:19:38.457+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-11T21:19:38.458+0000] {logging_mixin.py:190} INFO - Current task name:insert_book_data state:running start_date:2024-12-11 21:19:38.004442+00:00
+[2024-12-11T21:19:38.459+0000] {logging_mixin.py:190} INFO - Dag name:fetch_and_store_google_books and current dag run status:running
+[2024-12-11T21:19:38.459+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-11T21:19:38.494+0000] {base.py:84} INFO - Retrieving connection 'books_connection2'
+[2024-12-11T21:19:38.500+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering on Azure', 'Vlad Riscutia', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=q1Q5EAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.502+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.510+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering with Python', 'Paul Crickard', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=9RYFEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.512+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.518+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering with Google Cloud Platform', 'Adi Wijaya', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=AH9gEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.522+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.528+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering with Apache Spark, Delta Lake, and Lakehouse', 'Manoj Kukreja, Danil Zburivsky', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=XiJEEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.530+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.536+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Fundamentals of Data Engineering', 'Joe Reis, Matt Housley', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=3qd2EAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.538+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.544+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('97 Things Every Data Engineer Should Know', 'Tobias Macey', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=ZTQzEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.546+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.551+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('The Rails Way', 'Obie Fernandez', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=bSfoGQkZYcQC&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.554+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.559+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('The Pragmatic Programmer', 'David Thomas, Andrew Hunt', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=LhOlDwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.561+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.567+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Pipelines Pocket Reference', 'James Densmore', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=SxgcEAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.569+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.575+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Official Google Cloud Certified Professional Data Engineer Study Guide', 'Dan Sullivan', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=NDXnDwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.578+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.584+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data-Driven Science and Engineering', 'Steven L. Brunton, J. Nathan Kutz', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=rxNkEAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.586+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.592+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Azure Data Engineering Cookbook', 'Ahmad Osama', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=G3UjEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.594+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.600+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering and Communication Technology', 'K. Ashoka Reddy, B. Rama Devi, Boby George, K. Srujan Raju', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=48wvEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.601+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.607+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Emerging Research in Data Engineering Systems and Computer Communications', 'P. Venkata Krishna, Mohammad S. Obaidat', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=KIvPDwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.609+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.615+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Advances in Artificial Intelligence and Data Engineering', 'Niranjan N. Chiplunkar, Takanori Fukao', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=iIhezgEACAAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.619+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.626+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Azure Data Engineer Associate Certification Guide', 'Newton Alex', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=NCdcEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.628+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.634+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Perspectives on Data Science for Software Engineering', 'Tim Menzies, Laurie Williams, Thomas Zimmermann', 'Not Available', 5, 'https://play.google.com/store/books/details?id=Kc7nCQAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.636+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.643+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data-Driven Engineering Design', 'Ang Liu, Yuchen Wang, Xingzhi Wang', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=glJHEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.645+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.652+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering and Intelligent Computing', 'Suresh Chandra Satapathy, Vikrant Bhateja, K. Srujan Raju, B. Janakiramaiah', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=niYmDwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.655+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.661+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Science from Scratch', 'Joel Grus', 'Not Available', 5, 'http://books.google.co.in/books?id=24kdCAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.662+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.668+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Advanced Data Analysis and Modelling in Chemical Engineering', "Denis Constales, Gregory S. Yablonsky, Dagmar R. D'hooge, Joris W. Thybaut, Guy B. Marin", 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=IQ6dBAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.669+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.675+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Enterprise Big Data Engineering, Analytics, and Management', 'Atzmueller, Martin', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=P5BJDAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.677+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.683+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Warehousing Design and Advanced Engineering Applications: Methods for Complex Construction', 'Bellatreche, Ladjel', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=IsbJEPfJX_0C&source=gbs_api')
+[2024-12-11T21:19:38.685+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.690+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Systems, Patterns and Data Engineering with Geometric Calculi', 'Sebastià Xambó-Descamps', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=RvI4EAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.692+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.697+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Intelligent Data Engineering and Analytics', 'Suresh Chandra Satapathy, Yu-Dong Zhang, Vikrant Bhateja, Ritanjali Majhi', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=lQ36DwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.699+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.704+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Sharing Data and Models in Software Engineering', 'Tim Menzies, Ekrem Kocaguneli, Burak Turhan, Leandro Minku, Fayola Peters', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=Qj3LAwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.705+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.710+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Engineering Data on Mixing', 'Reiji Reiji Mezaki, Masafumi Masafumi Mochizuki, Kohei Ogawa', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=6PDnxdmwlKUC&source=gbs_api')
+[2024-12-11T21:19:38.711+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.716+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Reference Data for Engineers', 'Mac E. Van Valkenburg, Wendy M. Middleton', 'Not Available', 5, 'http://books.google.co.in/books?id=R67HARlhisYC&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.718+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.723+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Proceedings of the International Conference on Data Engineering and Communication Technology', 'Suresh Chandra Satapathy, Vikrant Bhateja, Amit Joshi', 'Not Available', 5, 'https://play.google.com/store/books/details?id=e7_mDAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.724+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.729+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Feature Engineering and Selection', 'Max Kuhn, Kjell Johnson', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=q5alDwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.730+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.735+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Architecting Modern Data Platforms', 'Jan Kunigk, Ian Buss, Paul Wilkinson, Lars George', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=1qd9DwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.737+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.741+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering and Data Science', 'Kukatlapalli Pradeep Kumar, Aynur Unal, Vinay Jha Pillai, Hari Murthy, M. Niranjanamurthy', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=5wfUEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.743+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.748+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Recent Advances in Artificial Intelligence and Data Engineering', 'Pushparaj Shetty D., Surendra Shetty', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=6bJLEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.749+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.754+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Science in Engineering and Management', 'Zdzislaw Polkowski, Sambit Kumar Mishra, Julian Vasilev', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=_vNUEAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.755+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.760+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('The Definitive Guide to Azure Data Engineering', "Ron C. L'Esteve", 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=vWx1zgEACAAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.761+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.766+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('The Self-Service Data Roadmap', 'Sandeep Uttamchandani', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=pEn8DwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.768+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.772+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Engineering Agile Big-Data Systems', 'Feeney, Kevin, Davies, Jim, Hellmann, Sebastian', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=btd8DwAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.773+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.778+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Azure Storage, Streaming, and Batch Analytics', 'Richard L. Nuckolls', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=BF4BEAAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.779+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.784+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Quantitative Methods of Data Analysis for the Physical Sciences and Engineering', 'Douglas G. Martinson', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=5jdqDwAAQBAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.786+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.790+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Deep Learning and Missing Data in Engineering Systems', 'Collins Achepsah Leke, Tshilidzi Marwala', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=8H3augEACAAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.792+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.797+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Foundations of data engineering: concepts, principles and practices', 'Dr. RVS Praveen', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=rgwtEQAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.799+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.803+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Teams', 'Jesse Anderson', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=6cMhzgEACAAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.805+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.809+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Big Data Application in Power Systems', 'Reza Arghandeh, Yuxun Zhou', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=tBHtEAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.811+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.815+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Site Reliability Engineering', 'Niall Richard Murphy, Betsy Beyer, Chris Jones, Jennifer Petoff', 'Not Available', 5, 'https://play.google.com/store/books/details?id=tYrPCwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.816+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.821+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Ultimate Data Engineering with Databricks', 'Mayank Malhotra', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=9hb1EAAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.823+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.828+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Data Engineering', 'Yupo Chan, John Talburt, Terry M. Talley', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=IpEfAjPItbwC&source=gbs_api')
+[2024-12-11T21:19:38.829+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.835+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ("Mechanical Engineer's Data Handbook", 'J. Carvill', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=6-VdBgAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.836+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.841+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Intelligent Data Engineering and Automated Learning – IDEAL 2018', 'Hujun Yin, David Camacho, Paulo Novais, Antonio J. Tallón-Ballesteros', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=YuN3DwAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.842+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.847+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Modern Data Engineering with Apache Spark', 'Scott Haines', 'Not Available', 'No Rating', 'http://books.google.co.in/books?id=HmGbzgEACAAJ&dq=data+engineering&hl=&source=gbs_api')
+[2024-12-11T21:19:38.849+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.854+0000] {sql.py:544} INFO - Running statement: 
+    INSERT INTO google_books (title, authors, price, rating, link)
+    VALUES (%s, %s, %s, %s, %s)
+    , parameters: ('Web Scalability for Startup Engineers', 'Artur Ejsmont', 'Not Available', 'No Rating', 'https://play.google.com/store/books/details?id=rnnlCQAAQBAJ&source=gbs_api')
+[2024-12-11T21:19:38.856+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-12-11T21:19:38.857+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-11T21:19:38.870+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-11T21:19:38.870+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fetch_and_store_google_books, task_id=insert_book_data, run_id=scheduled__2024-08-01T00:00:00+00:00, execution_date=20240801T000000, start_date=20241211T211938, end_date=20241211T211938
+[2024-12-11T21:19:38.881+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-11T21:19:38.883+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-11T21:19:38.884+0000] {logging_mixin.py:190} INFO - Dag name:fetch_and_store_google_books queued_at:2024-12-11 21:19:20.005824+00:00
+[2024-12-11T21:19:38.884+0000] {logging_mixin.py:190} INFO - Task hostname:bb74d1700244 operator:PythonOperator
+[2024-12-11T21:19:38.911+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-11T21:19:38.928+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-11T21:19:38.929+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

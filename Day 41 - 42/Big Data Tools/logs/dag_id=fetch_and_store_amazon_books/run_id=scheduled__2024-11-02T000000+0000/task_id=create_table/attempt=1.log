@@ -1,0 +1,47 @@
+[2024-12-11T20:43:33.262+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-11T20:43:33.294+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_and_store_amazon_books.create_table scheduled__2024-11-02T00:00:00+00:00 [queued]>
+[2024-12-11T20:43:33.319+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_and_store_amazon_books.create_table scheduled__2024-11-02T00:00:00+00:00 [queued]>
+[2024-12-11T20:43:33.320+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-11T20:43:33.409+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): create_table> on 2024-11-02 00:00:00+00:00
+[2024-12-11T20:43:33.451+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2785) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-11T20:43:33.468+0000] {standard_task_runner.py:72} INFO - Started process 2836 to run task
+[2024-12-11T20:43:33.461+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fetch_and_store_amazon_books', 'create_table', 'scheduled__2024-11-02T00:00:00+00:00', '--job-id', '483', '--raw', '--subdir', 'DAGS_FOLDER/app.py', '--cfg-path', '/tmp/tmp2r3an06h']
+[2024-12-11T20:43:33.479+0000] {standard_task_runner.py:105} INFO - Job 483: Subtask create_table
+[2024-12-11T20:43:33.645+0000] {task_command.py:467} INFO - Running <TaskInstance: fetch_and_store_amazon_books.create_table scheduled__2024-11-02T00:00:00+00:00 [running]> on host aaf3c4c4d810
+[2024-12-11T20:43:33.932+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_and_store_amazon_books' AIRFLOW_CTX_TASK_ID='create_table' AIRFLOW_CTX_EXECUTION_DATE='2024-11-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-02T00:00:00+00:00'
+[2024-12-11T20:43:33.933+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-11T20:43:33.934+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-11T20:43:33.934+0000] {logging_mixin.py:190} INFO - Current task name:create_table state:running start_date:2024-12-11 20:43:33.295659+00:00
+[2024-12-11T20:43:33.935+0000] {logging_mixin.py:190} INFO - Dag name:fetch_and_store_amazon_books and current dag run status:running
+[2024-12-11T20:43:33.936+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-11T20:43:33.936+0000] {sql.py:278} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS books (
+            id SERIAL PRIMARY KEY,
+            title TEXT NOT NULL,
+            authors TEXT,
+            price TEXT,
+            rating TEXT
+        );
+        
+[2024-12-11T20:43:33.989+0000] {base.py:84} INFO - Retrieving connection 'books_connection'
+[2024-12-11T20:43:34.005+0000] {base.py:84} INFO - Retrieving connection 'books_connection'
+[2024-12-11T20:43:34.020+0000] {sql.py:544} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS books (
+            id SERIAL PRIMARY KEY,
+            title TEXT NOT NULL,
+            authors TEXT,
+            price TEXT,
+            rating TEXT
+        );
+        , parameters: None
+[2024-12-11T20:43:34.061+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-11T20:43:34.062+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fetch_and_store_amazon_books, task_id=create_table, run_id=scheduled__2024-11-02T00:00:00+00:00, execution_date=20241102T000000, start_date=20241211T204333, end_date=20241211T204334
+[2024-12-11T20:43:34.087+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-11T20:43:34.089+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-11T20:43:34.099+0000] {logging_mixin.py:190} INFO - Dag name:fetch_and_store_amazon_books queued_at:2024-12-11 20:43:19.160531+00:00
+[2024-12-11T20:43:34.099+0000] {logging_mixin.py:190} INFO - Task hostname:aaf3c4c4d810 operator:PostgresOperator
+[2024-12-11T20:43:34.160+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-11T20:43:34.220+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-11T20:43:34.233+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
